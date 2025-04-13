@@ -1,0 +1,10 @@
+This directory is for course-related images referenced in the HTML file.
+
+Needed images:
+- personal-development.jpg
+- business.jpg
+- leadership.jpg
+- communication.jpg
+- self-confidence.jpg
+- leadership-essentials.jpg
+- effective-communication.jpg

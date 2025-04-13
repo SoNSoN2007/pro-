@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Dream Coach</title>
+    <link rel="stylesheet" href="../common/typography.css">
+    <link rel="stylesheet" href="../common/global-dark-mode.css">
+    <link rel="stylesheet" href="../common/dark-mode.css">
+    <link rel="stylesheet" href="../common/theme-toggle.css">
+    <link rel="stylesheet" href="../common/header-common.css">
+    <link rel="stylesheet" href="../common/logo-styles.css">
+    <link rel="stylesheet" href="../common/footer-styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="additional-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Fix for profile dropdown */
+        
+        .profile-dropdown.active .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .profile-dropdown {
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .cart-btn {
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: var(--text-primary, #2D3436);
+            text-decoration: none;
+        }
+        
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--primary-color, #00BFA6);
+            color: white;
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Accessibility - sr-only class for screen readers */
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        /* Fix for header gap */
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 70px;
+            padding: 0 15px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+        
+        .nav-actions button,
+        .nav-actions .cart-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-primary, #2D3436);
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Make sure all buttons have the same size and alignment */
+        
+        .theme-toggle,
+        .search-btn,
+        .cart-btn {
+            width: 40px;
+            height: 40px;
+        }
+        /* Fix for theme toggle button */
+        
+        .theme-toggle {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theme-toggle svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        /* Dark mode icon styles - fixed toggle */
+        
+        html[data-theme="light"] .theme-toggle .moon-icon {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        html[data-theme="light"] .theme-toggle .sun-icon {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+        }
+        
+        html[data-theme="dark"] .theme-toggle .moon-icon {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+        }
+        
+        html[data-theme="dark"] .theme-toggle .sun-icon {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .theme-toggle:hover {
+            background-color: rgba(0, 191, 166, 0.1);
+        }
+        
+        html[data-theme="dark"] .theme-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        /* Fix for dark mode backgrounds to be consistent across pages */
+        
+        html[data-theme="dark"] body {
+            background-color: var(--bg-dark, #1a1a1a);
+            color: var(--text-white, #f5f5f5);
+        }
+        
+        html[data-theme="dark"] .courses-page {
+            background-color: var(--bg-dark, #1a1a1a);
+        }
+        
+        html[data-theme="dark"] .courses-filters {
+            background-color: var(--bg-dark-secondary, #222);
+            border-color: var(--border-dark, #333);
+        }
+        
+        html[data-theme="dark"] .filters-container {
+            background-color: var(--bg-dark-secondary, #222);
+        }
+        
+        html[data-theme="dark"] .filter-option span {
+            color: var(--text-white, #f5f5f5);
+        }
+        
+        html[data-theme="dark"] .courses-header h1 {
+            color: var(--text-white, #f5f5f5);
+        }
+        
+        html[data-theme="dark"] .search-bar {
+            background-color: var(--bg-dark-secondary, #222);
+            border-color: var(--border-dark, #333);
+        }
+        
+        html[data-theme="dark"] .search-bar input {
+            color: var(--text-white, #f5f5f5);
+            background-color: var(--bg-dark-secondary, #222);
+        }
+        
+        html[data-theme="dark"] .course-card {
+            background-color: var(--bg-dark-secondary, #222);
+            border-color: var(--border-dark, #333);
+        }
+        
+        html[data-theme="dark"] .course-title {
+            color: var(--text-white, #f5f5f5);
+        }
+        
+        html[data-theme="dark"] .course-instructor {
+            color: var(--text-light, #aaa);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-common">
+                <a href="../welcome/index.html"><img src="../common/logo.png" alt="Dream Coach Logo"></a>
+            </div>
+            <div class="nav-links">
+                <a href="../home clint/index.html">Home</a>
+                <a href="../courses/courses.html" class="active">Courses</a>
+                <a href="../chat/index.html">Chat</a>
+                <a href="../comunity/index.html">Community</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" title="Toggle Dark Mode" id="themeToggleBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <a href="cart.html" class="cart-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <div class="cart-badge" id="cartBadge">0</div>
+                </a>
+                <div class="profile-dropdown">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Profile" class="profile-img">
+                    <div class="dropdown-content">
+                        <a href="../profile/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Profile</a>
+                        <a href="../courses/my-courses.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> My Courses</a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Settings</a>
+                        <hr>
+                        <a href="#" class="logout"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="courses-page">
+        <div class="container">
+            <div class="courses-header">
+                <h1>Browse All Courses</h1>
+                <div class="search-bar">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="search" placeholder="Search for courses..." id="courseSearch">
+                    <button class="btn btn-primary search-button">Search</button>
+                </div>
+            </div>
+
+            <div class="courses-layout">
+                <!-- Filters Sidebar -->
+                <div class="courses-filters">
+                    <div class="filters-container">
+                        <h2>Filters</h2>
+
+                        <div class="filter-group">
+                            <h3>Category</h3>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                  <input type="radio" name="category" value="all" checked>
+                  <span>All Categories</span>
+                </label>
+                                <label class="filter-option">
+                  <input type="radio" name="category" value="Web Development">
+                  <span>Web Development</span>
+                </label>
+                                <label class="filter-option">
+                  <input type="radio" name="category" value="JavaScript">
+                  <span>JavaScript</span>
+                </label>
+                                <label class="filter-option">
+                  <input type="radio" name="category" value="Design">
+                  <span>Design</span>
+                </label>
+                                <label class="filter-option">
+                  <input type="radio" name="category" value="Data Science">
+                  <span>Data Science</span>
+                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Level</h3>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                  <input type="radio" name="level" value="all" checked>
+                  <span>All Levels</span>
+                </label>
+                                <label class="filter-option">
+                  <input type="radio" name="level" value="beginner">
+                  <span>Beginner</span>
+                </label>
+                                <label class="filter-option">
+                  <input type="radio" name="level" value="intermediate">
+                  <span>Intermediate</span>
+                </label>
+                                <label class="filter-option">
+                  <input type="radio" name="level" value="advanced">
+                  <span>Advanced</span>
+                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h3>Price Range</h3>
+                            <div class="price-slider">
+                                <div class="price-range">
+                                    <span class="price-min">$0</span>
+                                    <span class="price-max">$150</span>
+                                </div>
+                                <input type="range" min="0" max="150" value="150" class="slider" id="priceSlider">
+                                <output for="priceSlider" id="priceOutput">$150</output>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Courses Grid -->
+                <div class="courses-grid">
+                    <div class="courses-result-info">
+                        <p id="coursesCount">Showing 4 courses</p>
+                    </div>
+
+                    <div class="courses-list" id="coursesList">
+                        <!-- Courses will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Dream Coach</h3>
+                <p>Dream Coach is a premier platform connecting aspiring individuals with expert coaches to help achieve personal and professional goals through personalized guidance and support.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../home clint/index.html">Home</a></li>
+                    <li><a href="../courses/courses.html">Courses</a></li>
+                    <li><a href="../courses/my-courses.html">My Courses</a></li>
+                    <li><a href="../profile/index.html">Profile</a></li>
+                    <li><a href="../chat/index.html">Chat</a></li>
+                    <li><a href="../comunity/index.html">Community</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coaching Street, Success City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@dreamcoach.com</p>
+                </div>
+                <p>Subscribe to our newsletter for updates and tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Dream Coach. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <template id="courseCardTemplate">
+    <div class="course-card">
+      <div class="course-card-image">
+        <img src="" alt="">
+        <span class="course-category"></span>
+      </div>
+      <div class="course-card-content">
+        <div class="course-rating">
+          <i data-lucide="star" class="star-icon"></i>
+          <span class="rating-value"></span>
+          <span class="rating-count"></span>
+        </div>
+        <h3 class="course-title"></h3>
+        <p class="course-instructor"></p>
+        <div class="course-duration">
+          <i data-lucide="clock" class="duration-icon"></i>
+          <span>10 hours</span>
+        </div>
+        <div class="course-level">
+          <span class="course-level-badge"></span>
+        </div>
+        <div class="course-price-row">
+          <div class="course-price">
+            <span class="current-price"></span>
+            <span class="original-price"></span>
+          </div>
+          <button class="btn-add-to-cart">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+    <script src="courses.js"></script>
+    <script>
+        // Initialize Lucide icons and handle all UI interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Profile dropdown functionality
+            const profileDropdown = document.querySelector('.profile-dropdown');
+            if (profileDropdown) {
+                profileDropdown.addEventListener('click', function(e) {
+                    this.classList.toggle('active');
+                    e.stopPropagation();
+                });
+            }
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                if (profileDropdown) {
+                    profileDropdown.classList.remove('active');
+                }
+            });
+
+            // Theme toggle functionality
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const htmlElement = document.documentElement;
+
+            // Apply saved theme preference on page load
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+
+            // Toggle theme when button is clicked
+            themeToggleBtn.addEventListener('click', function() {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+                // Update theme
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                console.log('Theme toggled to:', newTheme);
+
+                // Announce theme change for accessibility
+                const themeAnnouncement = newTheme === 'dark' ? 'Dark mode enabled' : 'Light mode enabled';
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.classList.add('sr-only');
+                announcement.textContent = themeAnnouncement;
+                document.body.appendChild(announcement);
+
+                // Remove announcement after it's been read by screen readers
+                setTimeout(() => {
+                    document.body.removeChild(announcement);
+                }, 3000);
+            });
+
+            // Price slider functionality
+            const priceSlider = document.getElementById('priceSlider');
+            const priceOutput = document.getElementById('priceOutput');
+
+            if (priceSlider && priceOutput) {
+                priceSlider.addEventListener('input', function() {
+                    priceOutput.value = '$' + this.value;
+                });
+            }
+
+            // Cart functionality
+            const cartBadge = document.getElementById('cartBadge');
+            if (cartBadge) {
+                // Retrieve cart data from localStorage if available
+                let cartItems = localStorage.getItem('cartItems') ?
+                    JSON.parse(localStorage.getItem('cartItems')) : [];
+
+                // Update cart badge
+                cartBadge.textContent = cartItems.length;
+            }
+        });
+    </script>
+</body>
+
+</html>

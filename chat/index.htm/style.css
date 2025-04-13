@@ -1,0 +1,100 @@
+:root {
+    --white: rgba(255, 255, 255, 1);
+    --text-base-500-font-family: "Inter", Helvetica;
+    --text-base-500-font-weight: 500;
+    --text-base-500-font-size: 15px;
+    --text-base-500-letter-spacing: 0px;
+    --text-base-500-line-height: 20px;
+    --text-base-500-font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: var(--text-base-500-font-family);
+}
+
+.messenger-telegram {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(2, 215, 244) 0%, rgb(89, 136, 208) 100%);
+}
+
+.left-sidebar {
+    width: 300px;
+    background: #f4f4f4;
+    border-right: 1px solid #e1e5ea;
+    overflow-y: auto;
+}
+
+.list-people {
+    padding: 10px;
+}
+
+.item-user {
+    padding: 10px;
+    border-bottom: 1px solid #e1e5ea;
+    cursor: pointer;
+}
+
+.item-user:hover {
+    background: #f9f9f9;
+}
+
+.group-2 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-container {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: #ffffff;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.message.user {
+    background: #ebf1ff;
+    align-self: flex-end;
+}
+
+.message.ai {
+    background: #f4f4f4;
+    align-self: flex-start;
+}
+
+.type-block {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #e1e5ea;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}

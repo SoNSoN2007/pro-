@@ -1,0 +1,150 @@
+/* Typography optimization for all pages */
+
+:root {
+    --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    /* Font sizes - Mobile First Approach */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+    --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1.1rem + 0.125vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+    --text-3xl: clamp(1.875rem, 1.8rem + 0.375vw, 2.25rem);
+    --text-4xl: clamp(2.25rem, 2rem + 1.25vw, 3rem);
+    --text-5xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+    /* Line heights */
+    --leading-tight: 1.2;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    /* Chat-specific typography */
+    --chat-message-text: var(--text-base);
+    --chat-username: var(--text-sm);
+    --chat-timestamp: var(--text-xs);
+    --chat-header: var(--text-lg);
+    --chat-input: var(--text-base);
+    --chat-button: var(--text-sm);
+}
+
+
+/* Base typography */
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: var(--text-5xl);
+}
+
+h2 {
+    font-size: var(--text-4xl);
+}
+
+h3 {
+    font-size: var(--text-3xl);
+}
+
+h4 {
+    font-size: var(--text-2xl);
+}
+
+h5 {
+    font-size: var(--text-xl);
+}
+
+h6 {
+    font-size: var(--text-lg);
+}
+
+
+/* Paragraphs and body text */
+
+p {
+    margin-bottom: 1rem;
+    font-size: var(--text-base);
+}
+
+
+/* Navigation and buttons */
+
+.nav-links a {
+    font-size: var(--text-base);
+    font-weight: 500;
+}
+
+.login-btn,
+.get-started-btn {
+    font-size: var(--text-base);
+    font-weight: 500;
+}
+
+
+/* Hero section */
+
+.hero h1 {
+    font-size: var(--text-5xl);
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: var(--text-xl);
+}
+
+
+/* Component-specific typography */
+
+.section-title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    line-height: var(--leading-tight);
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+    margin-bottom: 0.75rem;
+}
+
+.info-box p {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+}
+
+.mission-label,
+.commitment-label {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.mission-text,
+.commitment-text {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+}
+
+
+/* No media queries needed since we're using clamp() for responsive scaling */

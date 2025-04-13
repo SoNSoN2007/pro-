@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - Dream Coach</title>
+    <link rel="stylesheet" href="../common/global-dark-mode.css">
+    <link rel="stylesheet" href="../common/dark-mode.css">
+    <link rel="stylesheet" href="../common/theme-toggle.css">
+    <link rel="stylesheet" href="Forgot.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="illustration-container">
+            <img src="forgot-illustration.svg" alt="Forgot Password Illustration" class="forgot-illustration">
+        </div>
+        <div class="form-container">
+            <div class="logo-container">
+                <div class="logo">DREAM COACH</div>
+            </div>
+            <div class="forgot-content">
+                <h1>Forgot Password</h1>
+                <p class="description">Enter your email and we'll send you a link to reset your password.</p>
+
+                <form id="forgotForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <button onclick="location.href='../Verification/Verification.html'" type="submit" class="submit-btn">Send Reset Link</button>
+                    <!-- <a href="/Verification/Verification.html"></a> -->
+                </form>
+
+                <div class="back-to-login">
+                    <a href="../login/index.html">Back to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme toggle button -->
+    <div class="theme-toggle-container">
+        <button class="theme-toggle" title="Toggle Dark Mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </div>
+
+    <script src="forgot.js"></script>
+    <script src="../common/theme-switcher.js"></script>
+</body>
+
+</html>

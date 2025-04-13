@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <g transform="translate(150, 100)">
+    <circle cx="250" cy="150" r="120" fill="#00BFA6" opacity="0.2"/>
+    <path d="M250 60 C180 60, 150 150, 150 220 C150 290, 200 340, 250 340 C300 340, 350 290, 350 220 C350 150, 320 60, 250 60 Z" fill="#00BFA6" opacity="0.7"/>
+    <circle cx="250" cy="120" r="40" fill="#0084F4" opacity="0.8"/>
+    <path d="M190 230 C190 180, 310 180, 310 230 L310 300 C310 320, 290 340, 250 340 C210 340, 190 320, 190 300 Z" fill="#0084F4" opacity="0.6"/>
+    <path d="M220 140 L220 100 L280 100 L280 140" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M250 340 L250 380" stroke="#00BFA6" stroke-width="8" fill="none"/>
+    <path d="M200 380 L300 380" stroke="#00BFA6" stroke-width="8" fill="none"/>
+    <path d="M220 380 L220 420" stroke="#00BFA6" stroke-width="8" fill="none"/>
+    <path d="M280 380 L280 420" stroke="#00BFA6" stroke-width="8" fill="none"/>
+  </g>
+  <text x="400" y="550" font-family="Arial" font-size="24" fill="#2D3436" text-anchor="middle">Personal Development</text>
+</svg>

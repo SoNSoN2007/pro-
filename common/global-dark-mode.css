@@ -1,0 +1,328 @@
+/* Global Dark Mode CSS for Dream Coach Project */
+
+:root {
+    /* Light mode variables (default) */
+    --primary-color: #00BFA6;
+    --secondary-color: #f5f5f5;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --bg-primary: #fff;
+    --bg-secondary: #f5f5f5;
+    --border-color: #e0e0e0;
+    --gradient: linear-gradient(135deg, #00BFA6 0%, #0D8ABC 100%);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --input-bg: #fff;
+    --card-bg: #fff;
+    --header-bg: #fff;
+    --footer-bg: #f5f5f5;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --error-color: #f44336;
+    --info-color: #2196f3;
+    /* Form elements */
+    --input-text: #333;
+    --input-border: #e0e0e0;
+    --input-focus-border: #00BFA6;
+    --input-placeholder: #999;
+    --button-bg: var(--gradient);
+    --button-text: #fff;
+    --button-hover-shadow: 0 4px 12px rgba(0, 191, 166, 0.3);
+    /* Container backgrounds */
+    --container-bg: rgba(255, 255, 255, 0.95);
+    --container-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    /* Image containers */
+    --image-container-bg: linear-gradient(135deg, #f5f6fa 0%, #eef1f9 100%);
+    /* Body background */
+    --body-bg: linear-gradient(135deg, #00e5ff 0%, #673ab7 100%);
+    /* Dropdown and modal backgrounds */
+    --dropdown-bg: #fff;
+    --modal-bg: #fff;
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    /* Card and section backgrounds */
+    --card-hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --section-bg: #fff;
+    /* Widget colors */
+    --widget-bg: #f8f9fa;
+    --widget-border: #e0e0e0;
+}
+
+[data-theme='dark'] {
+    --primary-color: #00BFA6;
+    /* Keep primary color consistent */
+    --secondary-color: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #1a1a1a;
+    --border-color: #2d2d2d;
+    --gradient: linear-gradient(135deg, #00BFA6 0%, #0D8ABC 100%);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --input-bg: #2d2d2d;
+    --card-bg: #2d2d2d;
+    --header-bg: #1e1e1e;
+    --footer-bg: #1a1a1a;
+    --success-color: #81c784;
+    --warning-color: #ffb74d;
+    --error-color: #e57373;
+    --info-color: #64b5f6;
+    /* Form elements */
+    --input-text: #ffffff;
+    --input-border: #3d3d3d;
+    --input-focus-border: #00BFA6;
+    --input-placeholder: #777;
+    --button-bg: var(--gradient);
+    --button-text: #fff;
+    --button-hover-shadow: 0 4px 12px rgba(0, 191, 166, 0.3);
+    /* Container backgrounds */
+    --container-bg: rgba(45, 45, 45, 0.95);
+    --container-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* Image containers */
+    --image-container-bg: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    /* Body background */
+    --body-bg: linear-gradient(135deg, #004d40 0%, #311b92 100%);
+    /* Dropdown and modal backgrounds */
+    --dropdown-bg: #2d2d2d;
+    --modal-bg: #2d2d2d;
+    --hover-bg: rgba(255, 255, 255, 0.05);
+    /* Card and section backgrounds */
+    --card-hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --section-bg: #2d2d2d;
+    /* Widget colors */
+    --widget-bg: #333333;
+    --widget-border: #444444;
+}
+
+
+/* Global dark mode styles */
+
+[data-theme='dark'] body {
+    background: var(--body-bg);
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] .container {
+    background: var(--container-bg);
+    box-shadow: var(--container-shadow);
+}
+
+[data-theme='dark'] .image-container {
+    background: var(--image-container-bg);
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6 {
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] p,
+[data-theme='dark'] span,
+[data-theme='dark'] div {
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] input,
+[data-theme='dark'] select,
+[data-theme='dark'] textarea {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-color: var(--input-border);
+}
+
+[data-theme='dark'] input::placeholder,
+[data-theme='dark'] textarea::placeholder,
+[data-theme='dark'] select::placeholder {
+    color: var(--input-placeholder);
+}
+
+[data-theme='dark'] input:focus,
+[data-theme='dark'] select:focus,
+[data-theme='dark'] textarea:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.2);
+}
+
+[data-theme='dark'] a {
+    color: var(--primary-color);
+}
+
+
+/* Common header dark mode styling */
+
+[data-theme='dark'] header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] .nav-links a {
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] .nav-links a.active {
+    color: var(--primary-color);
+}
+
+[data-theme='dark'] .profile-dropdown .dropdown-content {
+    background-color: var(--dropdown-bg);
+    border-color: var(--border-color);
+}
+
+
+/* Common footer dark mode styling */
+
+[data-theme='dark'] .footer {
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] .footer-links a {
+    color: var(--text-secondary);
+}
+
+[data-theme='dark'] .footer-links a:hover {
+    color: var(--primary-color);
+}
+
+[data-theme='dark'] .newsletter-form input {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+}
+
+
+/* Card and Section dark mode styling */
+
+[data-theme='dark'] .card,
+[data-theme='dark'] .course-card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme='dark'] .course-card:hover {
+    box-shadow: var(--card-hover-shadow);
+}
+
+[data-theme='dark'] section {
+    background-color: var(--section-bg);
+}
+
+
+/* Button dark mode styling */
+
+[data-theme='dark'] button:not(.theme-toggle) {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+[data-theme='dark'] button.secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-primary);
+}
+
+
+/* Widget dark mode styling */
+
+[data-theme='dark'] .widget {
+    background-color: var(--widget-bg);
+    border-color: var(--widget-border);
+}
+
+
+/* Dropdown and modal styling */
+
+[data-theme='dark'] .dropdown-content,
+[data-theme='dark'] .modal-content {
+    background-color: var(--dropdown-bg);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme='dark'] .dropdown-content a {
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] .dropdown-content a:hover {
+    background-color: var(--hover-bg);
+}
+
+
+/* Scrollbar styling for dark mode */
+
+[data-theme='dark'] *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+[data-theme='dark'] *::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] *::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+[data-theme='dark'] *::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Theme toggle button styles */
+
+.theme-toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .theme-toggle {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Smooth transitions for all elements */
+
+body,
+header,
+footer,
+.card,
+section,
+input,
+button,
+div,
+a {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

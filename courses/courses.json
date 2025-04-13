@@ -1,0 +1,75 @@
+[{
+        "id": "1",
+        "title": "Complete Web Development Bootcamp",
+        "instructor": "Dr. Jennifer Lee",
+        "description": "Learn HTML, CSS, JavaScript, React, Node.js and more. This comprehensive course takes you from beginner to professional web developer with hands-on projects and assignments.",
+        "price": 99.99,
+        "discountPrice": 49.99,
+        "rating": 4.8,
+        "reviewCount": 4253,
+        "level": "beginner",
+        "category": "Web Development",
+        "image": "/placeholder.svg",
+        "duration": "42h 30m",
+        "isFeatured": true,
+        "lessons": [{
+                "id": "1-1",
+                "title": "Introduction to HTML",
+                "duration": "45m",
+                "content": "<h1>Introduction to HTML</h1><p>HTML is the standard markup language for web pages. In this lesson, we will cover the basics of HTML structure, tags, attributes, and how to create your first web page.</p><div class='video-placeholder'><img src='https://via.placeholder.com/800x450' alt='Video Placeholder'/><div class='play-button'><i class='fas fa-play'></i></div></div>"
+            },
+            {
+                "id": "1-2",
+                "title": "CSS Fundamentals",
+                "duration": "1h 15m",
+                "content": "<h1>CSS Fundamentals</h1><p>Learn how to style your HTML documents with CSS. This lesson covers selectors, properties, values, the box model, positioning, and responsive design principles.</p><div class='video-placeholder'><img src='https://via.placeholder.com/800x450' alt='Video Placeholder'/><div class='play-button'><i class='fas fa-play'></i></div></div>"
+            },
+            {
+                "id": "1-3",
+                "title": "JavaScript Basics",
+                "duration": "2h",
+                "content": "<h1>JavaScript Basics</h1><p>Introduction to JavaScript programming. We'll cover variables, data types, functions, loops, conditionals, and DOM manipulation.</p><div class='video-placeholder'><img src='https://via.placeholder.com/800x450' alt='Video Placeholder'/><div class='play-button'><i class='fas fa-play'></i></div></div>"
+            },
+            {
+                "id": "1-4",
+                "title": "Building Interactive Web Pages",
+                "duration": "1h 30m",
+                "content": "<h1>Building Interactive Web Pages</h1><p>Learn how to combine HTML, CSS, and JavaScript to create interactive web pages. This lesson covers event handling, form validation, and dynamic content updates.</p><div class='video-placeholder'><img src='https://via.placeholder.com/800x450' alt='Video Placeholder'/><div class='play-button'><i class='fas fa-play'></i></div></div>"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Advanced React and Redux",
+        "instructor": "Michael Thompson",
+        "description": "Take your React skills to the next level with advanced patterns, hooks, context API, and Redux for state management. Build complex applications with clean architecture.",
+        "price": 129.99,
+        "discountPrice": 79.99,
+        "rating": 4.9,
+        "reviewCount": 2187,
+        "level": "advanced",
+        "category": "Web Development",
+        "image": "/placeholder.svg",
+        "duration": "28h 15m",
+        "isFeatured": true,
+        "lessons": [{
+                "id": "2-1",
+                "title": "Advanced React Hooks",
+                "duration": "1h 30m",
+                "content": "<h1>Advanced React Hooks</h1><p>Deep dive into React hooks like useEffect, useContext, useReducer, and creating custom hooks for reusable logic.</p><div class='video-placeholder'><img src='https://via.placeholder.com/800x450' alt='Video Placeholder'/><div class='play-button'><i class='fas fa-play'></i></div></div>"
+            },
+            {
+                "id": "2-2",
+                "title": "Redux Architecture",
+                "duration": "2h",
+                "content": "<h1>Redux Architecture</h1><p>Learn how to implement Redux for state management in React applications. Topics include actions, reducers, store, and middleware.</p><div class='video-placeholder'><img src='https://via.placeholder.com/800x450' alt='Video Placeholder'/><div class='play-button'><i class='fas fa-play'></i></div></div>"
+            },
+            {
+                "id": "2-3",
+                "title": "Performance Optimization",
+                "duration": "1h 45m",
+                "content": "<h1>Performance Optimization</h1><p>Techniques for optimizing React applications including memoization, code splitting, virtualization, and profiling tools.</p><div class='video-placeholder'><img src='https://via.placeholder.com/800x450' alt='Video Placeholder'/><div class='play-button'><i class='fas fa-play'></i></div></div>"
+            }
+        ]
+    }
+]

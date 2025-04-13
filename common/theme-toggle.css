@@ -1,0 +1,98 @@
+/* Theme Toggle Button Styling */
+
+
+/* Fixed position theme toggle container (for floating button) */
+
+.theme-toggle-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* General toggle button styling (for both locations) */
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color, #00BFA6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+
+/* Theme toggle in navigation */
+
+.nav-links .theme-toggle {
+    margin-right: 15px;
+    background: transparent;
+    color: var(--text-color, #333);
+    box-shadow: none;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Navigation toggle hover style */
+
+.nav-links .theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Dark mode specific styling */
+
+[data-theme='dark'] .theme-toggle {
+    background: #333;
+    color: var(--primary-color, #00BFA6);
+}
+
+
+/* Dark mode nav toggle */
+
+[data-theme='dark'] .nav-links .theme-toggle {
+    background: transparent;
+    color: var(--text-color, #e0e0e0);
+}
+
+[data-theme='dark'] .nav-links .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .theme-toggle-container {
+        bottom: 15px;
+        right: 15px;
+    }
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+    .nav-links .theme-toggle {
+        margin-right: 10px;
+    }
+}

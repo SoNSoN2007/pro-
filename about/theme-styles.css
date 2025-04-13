@@ -1,0 +1,272 @@
+/* Theme-specific styles for the about page */
+
+
+/* Theme toggle button styling */
+
+.theme-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    margin-right: 10px;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle svg {
+    color: var(--text-color, #333);
+    transition: color 0.3s ease, transform 0.5s ease;
+}
+
+[data-theme="dark"] .theme-toggle svg {
+    color: var(--text-color-dark, #e0e0e0);
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(15deg);
+}
+
+
+/* Dark mode styles */
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border-color: #333;
+    --card-bg: #1e1e1e;
+    --primary-color: #3b82f6;
+    --button-hover: #2563eb;
+    --header-bg: #1a1a1a;
+    --footer-bg: #1a1a1a;
+    --timeline-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Apply dark mode to elements */
+
+[data-theme="dark"] body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] nav a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .about-hero,
+[data-theme="dark"] .mission-section,
+[data-theme="dark"] .story-section,
+[data-theme="dark"] .team-section,
+[data-theme="dark"] .values-section,
+[data-theme="dark"] .stats-section {
+    background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .hero-subtitle,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .section-subtitle,
+[data-theme="dark"] .section-description {
+    color: var(--text-color);
+}
+
+
+/* Mission and Values styling */
+
+[data-theme="dark"] .mission-card,
+[data-theme="dark"] .values-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="dark"] .mission-title,
+[data-theme="dark"] .value-title {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .mission-description,
+[data-theme="dark"] .value-description {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .mission-icon,
+[data-theme="dark"] .value-icon {
+    color: var(--primary-color);
+}
+
+
+/* Team members styling */
+
+[data-theme="dark"] .team-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="dark"] .team-member-name {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .team-member-position {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .team-member-bio {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .team-social a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .team-social a:hover {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .team-member-img {
+    border: 2px solid var(--border-color);
+    filter: brightness(0.9);
+}
+
+
+/* Company timeline styling */
+
+[data-theme="dark"] .timeline {
+    border-left: 2px solid var(--timeline-color);
+}
+
+[data-theme="dark"] .timeline-item {
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .timeline-item::before {
+    background-color: var(--primary-color);
+    border: 3px solid var(--bg-color);
+}
+
+[data-theme="dark"] .timeline-date {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .timeline-title {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .timeline-description {
+    color: var(--text-muted);
+}
+
+
+/* Stats cards styling */
+
+[data-theme="dark"] .stat-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="dark"] .stat-number {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .stat-label {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .stat-icon {
+    color: var(--primary-color);
+    opacity: 0.2;
+}
+
+
+/* Testimonials styling */
+
+[data-theme="dark"] .testimonial-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="dark"] .testimonial-text {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .testimonial-author {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .testimonial-company {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .testimonial-avatar {
+    border: 2px solid var(--border-color);
+}
+
+[data-theme="dark"] footer {
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .footer-links a {
+    color: var(--text-color);
+}
+
+
+/* Call to action button */
+
+[data-theme="dark"] .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+}
+
+
+/* Make transitions smooth */
+
+body,
+header,
+footer,
+.mission-card,
+.team-card,
+.timeline-item,
+.stat-card,
+.testimonial-card,
+a,
+button,
+h1,
+h2,
+h3,
+h4,
+p,
+.team-member-img {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}

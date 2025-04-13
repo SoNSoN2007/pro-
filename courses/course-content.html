@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Content - Dream Coach</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="course-content.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="course-container">
+        <!-- Left Sidebar for Course Content -->
+        <div class="course-content-sidebar">
+            <div class="sidebar-header">
+                <h2>Course Contents</h2>
+                <div class="course-progress-info">
+                    <span class="lessons-count">0 lessons</span>
+                    <span class="completion-percentage">0% completed</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="lessons-container">
+                <!-- Lessons will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="course-main-content">
+            <div class="course-header">
+                <h1 class="course-title">Course Title</h1>
+                <div class="course-actions">
+                    <button class="btn-prev" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                    <button class="btn-next">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="lesson-content">
+                <!-- Current lesson content will be loaded here -->
+                <div class="lesson-placeholder">
+                    <h2>Select a lesson to begin</h2>
+                    <p>Click on any lesson from the sidebar to start learning</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lesson Item Template -->
+    <template id="lessonItemTemplate">
+        <button class="lesson-item">
+            <div class="lesson-indicator">
+                <div class="lesson-number"></div>
+                <div class="lesson-playing-indicator">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+            <div class="lesson-details">
+                <div class="lesson-title"></div>
+                <div class="lesson-duration">
+                    <i class="fas fa-clock"></i>
+                    <span></span>
+                </div>
+            </div>
+            <i class="fas fa-chevron-right lesson-chevron"></i>
+        </button>
+    </template>
+
+    <script src="course-content.js"></script>
+</body>
+
+</html>

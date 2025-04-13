@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <g transform="translate(150, 100)">
+    <circle cx="250" cy="150" r="120" fill="#0084F4" opacity="0.2"/>
+    <!-- Central figure (leader) -->
+    <circle cx="250" cy="120" r="35" fill="#00BFA6"/>
+    <path d="M250 155 L250 250" stroke="#00BFA6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M250 180 L210 220" stroke="#00BFA6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M250 180 L290 220" stroke="#00BFA6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M230 300 L250 250 L270 300" stroke="#00BFA6" stroke-width="10" stroke-linecap="round" fill="none"/>
+    
+    <!-- Team members (smaller) -->
+    <circle cx="170" cy="180" r="25" fill="#0084F4"/>
+    <path d="M170 205 L170 270" stroke="#0084F4" stroke-width="8" stroke-linecap="round"/>
+    <path d="M170 225 L145 255" stroke="#0084F4" stroke-width="8" stroke-linecap="round"/>
+    <path d="M170 225 L195 255" stroke="#0084F4" stroke-width="8" stroke-linecap="round"/>
+    
+    <circle cx="330" cy="180" r="25" fill="#0084F4"/>
+    <path d="M330 205 L330 270" stroke="#0084F4" stroke-width="8" stroke-linecap="round"/>
+    <path d="M330 225 L305 255" stroke="#0084F4" stroke-width="8" stroke-linecap="round"/>
+    <path d="M330 225 L355 255" stroke="#0084F4" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Connection lines -->
+    <path d="M215 120 L185 155" stroke="#2D3436" stroke-width="3" stroke-dasharray="5,5"/>
+    <path d="M285 120 L315 155" stroke="#2D3436" stroke-width="3" stroke-dasharray="5,5"/>
+    
+    <!-- Crown symbol -->
+    <path d="M220 85 L250 65 L280 85 L270 100 L230 100 Z" fill="#FFD700"/>
+  </g>
+  <text x="400" y="550" font-family="Arial" font-size="24" fill="#2D3436" text-anchor="middle">Leadership</text>
+</svg>

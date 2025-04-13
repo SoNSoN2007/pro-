@@ -1,0 +1,1705 @@
+/* Profile Page Styles for Dream Coach - LinkedIn Style */
+
+:root {
+    --primary-color: #00BFA6;
+    --primary-dark: #008E76;
+    --secondary-color: #0084F4;
+    --text-primary: #2D3436;
+    --text-secondary: #636E72;
+    --bg-light: #F5F6F8;
+    --bg-white: #FFFFFF;
+    --border-color: #E2E8F0;
+    --gradient: linear-gradient(135deg, #00BFA6 0%, #0084F4 100%);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-primary: 0 8px 25px rgba(0, 191, 166, 0.25);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --font-size-xs: 0.75rem;
+    /* 12px */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-base: 0.9375rem;
+    /* 15px */
+    --font-size-md: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+
+/* Dark mode variables */
+
+[data-theme="dark"] {
+    --primary-color: #00dfc4;
+    --primary-dark: #00c2aa;
+    --secondary-color: #4f90ff;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --bg-light: #121212;
+    --bg-white: #1e1e1e;
+    --border-color: #333333;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    --shadow-primary: 0 8px 25px rgba(0, 191, 166, 0.2);
+}
+
+body {
+    background-color: var(--bg-light);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+}
+
+
+/* Main Profile Container */
+
+.profile-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 2rem auto;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+
+/* Sidebar Styles */
+
+.profile-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.profile-sidebar:not(.right-sidebar) {
+    display: none;
+    /* Hide the left sidebar */
+}
+
+.right-sidebar {
+    display: block;
+    width: 300px;
+}
+
+
+/* Right Sidebar Styles */
+
+.sidebar-section {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.sidebar-section:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.sidebar-section h3 {
+    font-size: var(--font-size-xs);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+
+/* Profile Strength Section */
+
+.profile-strength {
+    margin-bottom: 1rem;
+}
+
+.strength-progress {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.strength-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.7));
+    border-radius: 3px;
+}
+
+.profile-strength p {
+    font-size: var(--font-size-xs);
+    margin: 0.5rem 0;
+}
+
+.strength-tips {
+    margin-top: 0.75rem;
+}
+
+.tip-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-xs);
+}
+
+.tip-item i {
+    margin-right: 0.5rem;
+    color: white;
+}
+
+
+/* Member List Styles */
+
+.member-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.member-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+}
+
+.member-item:hover {
+    transform: translateY(-2px);
+}
+
+.member-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.member-item img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.75rem;
+    border: 2px solid white;
+    box-shadow: var(--shadow-sm);
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-info h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.member-info p {
+    margin: 0 0 0.5rem 0;
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.connect-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.75rem;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* Course Recommendations */
+
+.course-recommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.recommended-course {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+}
+
+.recommended-course:hover {
+    transform: translateY(-2px);
+}
+
+.recommended-course:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.recommended-course img {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-right: 0.75rem;
+    border: 1px solid var(--border-color);
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-info h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.course-info p {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.course-price {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.sidebar-menu {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.25rem;
+    font-size: var(--font-size-sm);
+    transition: all 0.2s ease;
+}
+
+.sidebar-menu a i {
+    margin-right: 0.75rem;
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-menu a:hover {
+    background-color: rgba(0, 191, 166, 0.1);
+}
+
+.sidebar-menu a.active {
+    background-color: rgba(0, 191, 166, 0.1);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+
+/* Main Content Area */
+
+.profile-content {
+    flex: 1;
+    min-width: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* Profile Header */
+
+.profile-header {
+    background: var(--gradient-blue);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-md);
+    color: white;
+    border: 1px solid var(--border-color);
+}
+
+.profile-cover-image {
+    height: 200px;
+    background: var(--gradient);
+    position: relative;
+}
+
+.profile-user-info {
+    display: flex;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.profile-avatar {
+    position: relative;
+    margin-top: -60px;
+    margin-right: 1.5rem;
+    z-index: 10;
+}
+
+.profile-avatar img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-avatar img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.status-badge {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 191, 166, 0.4);
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 191, 166, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(0, 191, 166, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 191, 166, 0);
+    }
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.username {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+}
+
+.user-title {
+    margin: 0 0 0.75rem 0;
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+}
+
+.user-bio {
+    margin: 0 0 1.25rem 0;
+    font-size: var(--font-size-sm);
+    max-width: 600px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-btn,
+.more-btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.875rem;
+}
+
+.contact-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow-primary);
+}
+
+.contact-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 191, 166, 0.35);
+}
+
+.contact-btn:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-primary);
+}
+
+.more-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.linkedin-card-header .more-btn {
+    background-color: transparent;
+    color: var(--linkedin-blue);
+    border: 1px solid var(--linkedin-blue);
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+}
+
+.more-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* LinkedIn Style Cards */
+
+.linkedin-card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.linkedin-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.linkedin-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.linkedin-card-header h2 {
+    margin: 0;
+    font-size: var(--font-size-md);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.linkedin-card-header span {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
+.linkedin-card-body {
+    padding: 1.25rem;
+    flex: 1;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+.show-all {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+
+.show-all i {
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.show-all:hover i {
+    transform: translateX(3px);
+}
+
+.show-all-container {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+
+/* Work Experience - LinkedIn Style */
+
+.work-experience-item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.work-experience-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.work-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    flex-shrink: 0;
+}
+
+.work-experience-item:hover .work-icon {
+    box-shadow: var(--shadow-sm);
+}
+
+.work-icon img.company-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.work-details {
+    flex: 1;
+}
+
+.work-details h3 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    color: var(--text-primary);
+}
+
+.work-period {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin: 0 0 0.5rem 0;
+}
+
+.work-description {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    margin: 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.work-tags span {
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+    font-size: var(--font-size-xs);
+    padding: 0.3rem 0.75rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.work-tags span:hover {
+    background-color: rgba(0, 191, 166, 0.1);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+
+/* Activity Feed - LinkedIn Style */
+
+.activity-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.activity-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.activity-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.activity-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.activity-action {
+    color: var(--text-secondary);
+    font-size: var(--font-size-xs);
+}
+
+.activity-time {
+    color: var(--text-secondary);
+    font-size: var(--font-size-xs);
+    margin-left: 0.25rem;
+}
+
+.activity-text {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+}
+
+.activity-image {
+    width: 100%;
+    border-radius: var(--radius-md);
+    margin: 0.75rem 0;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.activity-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.activity-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.activity-action-btn:hover {
+    background-color: rgba(0, 191, 166, 0.1);
+    color: var(--primary-color);
+}
+
+.activity-action-btn i {
+    font-size: var(--font-size-sm);
+}
+
+
+/* Skills with Endorsements - LinkedIn Style */
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.skill-header p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.endorsement-count {
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+    padding: 0.35rem 0.75rem;
+    border-radius: 16px;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.skill-item:hover .endorsement-count {
+    background-color: rgba(0, 191, 166, 0.1);
+    color: var(--primary-color);
+}
+
+.skill-progress-bar {
+    height: 6px;
+    background-color: var(--bg-light);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+
+/* Recommendations - LinkedIn Style */
+
+.recommendation-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.recommendation-item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.recommendation-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.recommender-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.recommender-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recommendation-content {
+    flex: 1;
+}
+
+.recommender-info h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+}
+
+.recommender-info p {
+    margin: 0 0 0.75rem 0;
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.recommendation-text {
+    margin: 0 0 0.5rem 0;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.recommendation-date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+
+/* Right Sidebar - LinkedIn Style */
+
+.right-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding-left: 0.5rem;
+}
+
+
+/* Sidebar section styling is already defined above */
+
+
+/* Profile Strength */
+
+.profile-strength {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.strength-progress {
+    height: 8px;
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 4px;
+}
+
+.strength-tips {
+    margin-top: 1rem;
+}
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.tip-item i {
+    color: var(--primary-color);
+    margin-top: 0.2rem;
+}
+
+.tip-item span {
+    font-size: var(--font-size-xs);
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
+.member-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.member-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.member-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.member-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 2px solid white;
+    box-shadow: var(--shadow-sm);
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-info h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.member-info p {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.message-btn,
+.member-info .contact-btn {
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+}
+
+.message-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.message-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.connect-btn {
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.connect-btn:hover {
+    background-color: #1D4ED8;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .profile-container {
+        flex-direction: column;
+    }
+    .profile-sidebar {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .sidebar-menu {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    .sidebar-menu a {
+        flex: 0 0 auto;
+        margin-right: 1rem;
+    }
+    .right-sidebar {
+        width: 100%;
+        order: 3;
+    }
+    .profile-content {
+        width: 100%;
+        order: 2;
+    }
+    .linkedin-card-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .activity-feed {
+        gap: 1rem;
+    }
+    .recommendation-tabs {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-user-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .profile-avatar img {
+        width: 120px;
+        height: 120px;
+    }
+    .profile-details {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .profile-actions {
+        justify-content: center;
+        margin-top: 1.25rem;
+    }
+    .work-experience-item {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .work-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .activity-item {
+        flex-direction: column;
+    }
+    .activity-avatar {
+        margin-bottom: 1rem;
+    }
+    .activity-actions {
+        justify-content: space-between;
+    }
+    .recommendation-item {
+        flex-direction: column;
+    }
+    .recommender-avatar {
+        margin-bottom: 0.5rem;
+    }
+    .skill-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .endorsement-avatars {
+        justify-content: center;
+    }
+    .linkedin-card {
+        margin-bottom: 1rem;
+    }
+    .linkedin-card-header {
+        padding: 0.85rem 1rem;
+        flex-wrap: wrap;
+    }
+    .linkedin-card-body {
+        padding: 1rem;
+    }
+    .activity-item {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .activity-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    .activity-image {
+        max-height: 250px;
+        margin: 0.5rem 0;
+    }
+    .work-tags {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-header {
+        margin-bottom: 1rem;
+    }
+    .profile-cover-image {
+        height: 120px;
+    }
+    .profile-avatar img {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+    }
+    .username {
+        font-size: 1.25rem;
+    }
+    .user-title {
+        font-size: 0.875rem;
+    }
+    .contact-btn,
+    .more-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    .linkedin-card-header h2 {
+        font-size: var(--font-size-base);
+    }
+    .activity-image {
+        max-height: 200px;
+    }
+}
+
+
+/* Modal Styles for Contact and Messaging */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contact-modal,
+.message-modal {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+    animation: slideIn 0.3s forwards;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    color: var(--text-primary);
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.close-modal:hover {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+    transition: var(--transition-fast);
+    font-family: 'Inter', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.cancel-btn {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.cancel-btn:hover {
+    background-color: #E2E8F0;
+}
+
+.send-btn,
+.ok-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.send-btn:hover,
+.ok-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.attachment-btn {
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+    border: none;
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attachment-btn:hover {
+    background-color: #E2E8F0;
+    color: var(--text-primary);
+}
+
+.recipient {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.recipient-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.recipient-info h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.recipient-info p {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.success-modal .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+}
+
+.success-modal p {
+    margin: 0.25rem 0;
+    color: var(--text-primary);
+}
+
+.success-modal .ok-btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 3rem;
+}
+
+
+/* Toast Notification Styles */
+
+.toast-notification {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 1100;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 350px;
+}
+
+.toast-notification.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.toast-message {
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+
+/* More Dropdown Styles */
+
+.more-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin-top: 0.5rem;
+    min-width: 200px;
+    z-index: 100;
+    animation: fadeIn 0.2s forwards;
+}
+
+.more-dropdown ul {
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.more-dropdown li {
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+}
+
+.more-dropdown li:hover {
+    background-color: var(--bg-light);
+}
+
+.more-dropdown li i {
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+}
+
+
+/* Endorse Button Styles */
+
+.endorse-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: fadeIn 0.3s forwards;
+    z-index: 10;
+}
+
+.endorse-btn.endorsed {
+    background-color: #38B2AC;
+}
+
+.endorse-btn i {
+    font-size: var(--font-size-sm);
+}
+
+
+/* Updated styles for expandable sections */
+
+.linkedin-card.expanded .linkedin-card-body {
+    max-height: none;
+}
+
+.linkedin-card .activity-feed,
+.linkedin-card .skills-container {
+    transition: max-height var(--transition-slow);
+}
+
+
+/* Style overrides for requested connection */
+
+.connect-btn.requested {
+    background-color: #38B2AC;
+}
+
+.more-btn {
+    position: relative;
+}
+
+
+/* Dark mode styles for profile components */
+
+[data-theme="dark"] .profile-container {
+    background-color: var(--bg-light);
+}
+
+[data-theme="dark"] .sidebar-section {
+    background-color: var(--bg-white);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .sidebar-menu a {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .sidebar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .sidebar-menu a.active {
+    color: var(--primary-color);
+    background-color: rgba(0, 223, 196, 0.1);
+}
+
+[data-theme="dark"] .linkedin-card {
+    background-color: var(--bg-white);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .profile-header {
+    background-color: var(--bg-white);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .profile-cover-image {
+    background-color: #253238;
+}
+
+[data-theme="dark"] .profile-avatar img {
+    border-color: var(--bg-white);
+}
+
+[data-theme="dark"] .activity-item {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .work-experience-item {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .skill-progress-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .skill-progress {
+    background: var(--gradient);
+}
+
+[data-theme="dark"] .work-tags span {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .recommendation-item {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .tab-btn {
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .tab-btn.active {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="dark"] .contact-modal,
+[data-theme="dark"] .message-modal {
+    background-color: var(--bg-white);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-header {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-body input,
+[data-theme="dark"] .modal-body textarea {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .toast-notification {
+    background-color: var(--bg-white);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .work-icon {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .work-tags span:hover {
+    background-color: rgba(0, 223, 196, 0.1);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .activity-action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .show-all-container {
+    border-color: var(--border-color);
+}
+
+
+/* End of dark mode styles */

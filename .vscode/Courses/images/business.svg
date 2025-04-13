@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <g transform="translate(150, 100)">
+    <rect x="150" y="100" width="300" height="250" rx="15" fill="#0084F4" opacity="0.2"/>
+    <rect x="200" y="50" width="200" height="300" rx="10" fill="#0084F4" opacity="0.6"/>
+    <rect x="230" y="100" width="140" height="200" fill="white" stroke="#00BFA6" stroke-width="5"/>
+    <line x1="230" y1="150" x2="370" y2="150" stroke="#00BFA6" stroke-width="5"/>
+    <line x1="230" y1="200" x2="370" y2="200" stroke="#00BFA6" stroke-width="5"/>
+    <line x1="230" y1="250" x2="370" y2="250" stroke="#00BFA6" stroke-width="5"/>
+    <circle cx="250" cy="125" r="10" fill="#00BFA6"/>
+    <circle cx="250" cy="175" r="10" fill="#00BFA6"/>
+    <circle cx="250" cy="225" r="10" fill="#00BFA6"/>
+    <circle cx="250" cy="275" r="10" fill="#00BFA6"/>
+    <path d="M300 350 L300 380 L200 380 L200 350" stroke="#0084F4" stroke-width="8" fill="none"/>
+  </g>
+  <text x="400" y="550" font-family="Arial" font-size="24" fill="#2D3436" text-anchor="middle">Business</text>
+</svg>

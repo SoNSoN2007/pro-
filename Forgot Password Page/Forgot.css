@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+body {
+    min-height: 100vh;
+    background: var(--body-bg, linear-gradient(135deg, #00e5ff 0%, #673ab7 100%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: var(--text-primary, #333);
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px;
+    display: flex;
+    background: var(--container-bg, rgba(255, 255, 255, 0.95));
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--container-shadow, 0 20px 40px rgba(0, 0, 0, 0.15));
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.8s ease-out;
+}
+
+.illustration-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+}
+
+.forgot-illustration {
+    max-width: 100%;
+    height: auto;
+    animation: fadeIn 1s ease-out;
+}
+
+.form-container {
+    flex: 1;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.logo-container {
+    margin-bottom: 30px;
+    animation: slideIn 0.6s ease-out;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    font-weight: bold;
+    color: #673ab7;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.forgot-content {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: var(--text-primary, #2d3748);
+    font-weight: 600;
+    animation: slideIn 0.6s ease-out 0.1s backwards;
+}
+
+.description {
+    color: var(--text-secondary, #718096);
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    animation: slideIn 0.6s ease-out 0.2s backwards;
+    max-width: 320px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 320px;
+    animation: fadeIn 0.6s ease-out 0.3s backwards;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-secondary, #4a5568);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--input-border, #e2e8f0);
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: var(--input-bg, #f8fafc);
+    color: var(--input-text, #333);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--input-focus-border, #673ab7);
+    background: var(--bg-primary, white);
+    box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px;
+    background: var(--primary-color, #673ab7);
+    color: var(--button-text, white);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    animation: slideIn 0.6s ease-out 0.4s backwards;
+}
+
+.submit-btn:hover {
+    background: var(--primary-color, #5c34a4);
+    transform: translateY(-2px);
+    box-shadow: var(--button-hover-shadow, 0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.back-to-login {
+    margin-top: 32px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-out 0.5s backwards;
+}
+
+.back-to-login a {
+    color: var(--primary-color, #673ab7);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.back-to-login a:hover {
+    color: var(--primary-color, #5c34a4);
+    text-decoration: underline;
+}
+
+
+/* Message Styles */
+
+.error-message,
+.success-message {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.error-message {
+    background-color: rgba(254, 226, 226, 0.9);
+    color: #dc2626;
+    border: 1px solid #f87171;
+}
+
+.success-message {
+    background-color: rgba(220, 252, 231, 0.9);
+    color: #16a34a;
+    border: 1px solid #4ade80;
+}
+
+.error-message i,
+.success-message i {
+    margin-right: 8px;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .illustration-container {
+        display: none;
+    }
+    .form-container {
+        padding: 32px 24px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .logo-container {
+        margin-bottom: 24px;
+        text-align: center;
+    }
+}
+
+
+/* For smaller screens */
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 24px 16px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <g transform="translate(150, 100)">
+    <circle cx="250" cy="150" r="120" fill="#00BFA6" opacity="0.2"/>
+    
+    <!-- Person silhouette -->
+    <circle cx="250" cy="100" r="40" fill="#0084F4" opacity="0.8"/>
+    <path d="M190 230 C190 180, 310 180, 310 230 L310 300 C310 320, 290 340, 250 340 C210 340, 190 320, 190 300 Z" fill="#0084F4" opacity="0.6"/>
+    
+    <!-- Confidence rays -->
+    <path d="M250 30 L250 60" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+    <path d="M180 50 L200 70" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+    <path d="M320 50 L300 70" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+    <path d="M150 100 L180 100" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+    <path d="M350 100 L320 100" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+    <path d="M180 150 L200 130" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+    <path d="M320 150 L300 130" stroke="#FFD700" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Star symbol -->
+    <path d="M250 100 L260 120 L280 120 L265 135 L270 155 L250 145 L230 155 L235 135 L220 120 L240 120 Z" fill="#FFD700"/>
+    
+    <!-- Upward arrow -->
+    <path d="M250 340 L250 380" stroke="#00BFA6" stroke-width="8" fill="none"/>
+    <path d="M250 380 L230 360 M250 380 L270 360" stroke="#00BFA6" stroke-width="8" fill="none"/>
+  </g>
+  <text x="400" y="550" font-family="Arial" font-size="24" fill="#2D3436" text-anchor="middle">Mastering Self-Confidence</text>
+</svg>

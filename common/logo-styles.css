@@ -1,0 +1,192 @@
+Common Logo Styles for Dream Coach Platform .logo-common {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0;
+}
+
+.logo-common img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-common img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .logo-common img {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-common img {
+        height: 30px;
+    }
+}
+
+
+/* Header optimization */
+
+
+/* 
+header {
+    background: white;
+    padding: 0 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 60px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    margin: 0 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover:after,
+.nav-links a.active:after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-actions button:hover {
+    background: rgba(0, 191, 166, 0.1);
+    color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid var(--primary-color);
+}
+
+.profile-img:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 191, 166, 0.2);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+
+.dropdown-content a:hover {
+    background: rgba(0, 191, 166, 0.1);
+    color: var(--primary-color);
+}
+
+.dropdown-content hr {
+    margin: 0.5rem 0;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content .logout {
+    color: #dc3545;
+}
+
+.dropdown-content .logout:hover {
+    background: rgba(220, 53, 69, 0.1);
+} */

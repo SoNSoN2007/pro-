@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification - Dream Coach</title>
+    <link rel="stylesheet" href="../common/global-dark-mode.css">
+    <link rel="stylesheet" href="../common/dark-mode.css">
+    <link rel="stylesheet" href="Verification.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="verification-container">
+            <div class="image-container">
+                <img src="../sin up/images/coaching-illustration.svg" alt="Verification Illustration" class="verification-illustration">
+            </div>
+            <div class="form-container">
+                <div class="logo">DREAM COACH</div>
+                <h1>Verification</h1>
+                <p class="verification-text">We've sent a verification code to your email</p>
+                <p class="email-display"><strong>example@email.com</strong></p>
+
+                <form id="verificationForm">
+                    <div class="code-inputs">
+                        <input type="text" maxlength="1" class="code-input" autofocus>
+                        <input type="text" maxlength="1" class="code-input">
+                        <input type="text" maxlength="1" class="code-input">
+                        <input type="text" maxlength="1" class="code-input">
+                        <input type="text" maxlength="1" class="code-input">
+                        <input type="text" maxlength="1" class="code-input">
+                    </div>
+
+                    <button type="submit" class="verify-btn">Verify</button>
+                </form>
+
+                <div class="resend-options">
+                    <p class="timer">Resend code in <span id="countdown">60</span>s</p>
+                    <div class="options">
+                        <a href="#" class="resend-link" id="resendCode">Resend Code</a>
+                        <span class="divider-dot">•</span>
+                        <a href="#" class="call-link">Call Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme toggle button -->
+    <div class="theme-toggle-container">
+        <button class="theme-toggle" title="Toggle Dark Mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </div>
+
+    <script src="verification.js"></script>
+    <script src="../common/theme-switcher.js"></script>
+</body>
+
+</html>

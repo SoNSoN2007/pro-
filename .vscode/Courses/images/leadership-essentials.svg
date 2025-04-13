@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <g transform="translate(150, 100)">
+    <circle cx="250" cy="150" r="120" fill="#0084F4" opacity="0.2"/>
+    
+    <!-- Podium/Steps -->
+    <rect x="150" y="250" width="200" height="50" fill="#0084F4" opacity="0.6"/>
+    <rect x="180" y="200" width="140" height="50" fill="#0084F4" opacity="0.8"/>
+    <rect x="210" y="150" width="80" height="50" fill="#00BFA6" opacity="0.8"/>
+    
+    <!-- Leader figure on top -->
+    <circle cx="250" cy="120" r="25" fill="#00BFA6"/>
+    <path d="M250 145 L250 190" stroke="#00BFA6" stroke-width="6" stroke-linecap="round"/>
+    <path d="M250 160 L230 180" stroke="#00BFA6" stroke-width="6" stroke-linecap="round"/>
+    <path d="M250 160 L270 180" stroke="#00BFA6" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Team figures on steps -->
+    <circle cx="200" cy="180" r="15" fill="#0084F4"/>
+    <path d="M200 195 L200 220" stroke="#0084F4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M200 205 L190 215" stroke="#0084F4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M200 205 L210 215" stroke="#0084F4" stroke-width="4" stroke-linecap="round"/>
+    
+    <circle cx="300" cy="180" r="15" fill="#0084F4"/>
+    <path d="M300 195 L300 220" stroke="#0084F4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M300 205 L290 215" stroke="#0084F4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M300 205 L310 215" stroke="#0084F4" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- More team figures at bottom -->
+    <circle cx="180" cy="230" r="15" fill="#2D3436" opacity="0.6"/>
+    <path d="M180 245 L180 270" stroke="#2D3436" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    <path d="M180 255 L170 265" stroke="#2D3436" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    <path d="M180 255 L190 265" stroke="#2D3436" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    
+    <circle cx="320" cy="230" r="15" fill="#2D3436" opacity="0.6"/>
+    <path d="M320 245 L320 270" stroke="#2D3436" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    <path d="M320 255 L310 265" stroke="#2D3436" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    <path d="M320 255 L330 265" stroke="#2D3436" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Crown symbol -->
+    <path d="M230 95 L250 80 L270 95 L265 105 L235 105 Z" fill="#FFD700"/>
+    
+    <!-- Briefcase symbol -->
+    <rect x="225" y="320" width="50" height="40" rx="5" fill="#2D3436" opacity="0.8"/>
+    <rect x="240" y="310" width="20" height="10" rx="2" fill="#2D3436" opacity="0.8"/>
+  </g>
+  <text x="400" y="550" font-family="Arial" font-size="24" fill="#2D3436" text-anchor="middle">Business Leadership Essentials</text>
+</svg>

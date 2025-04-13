@@ -1,0 +1,157 @@
+/* Theme-specific styles for the welcome page */
+
+
+/* Theme toggle button styling */
+
+.theme-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    margin-right: 10px;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle svg {
+    color: var(--text-color, #333);
+    transition: color 0.3s ease, transform 0.5s ease;
+}
+
+[data-theme="dark"] .theme-toggle svg {
+    color: var(--text-color-dark, #e0e0e0);
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(15deg);
+}
+
+
+/* Dark mode styles */
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border-color: #333;
+    --card-bg: #1e1e1e;
+    --primary-color: #3b82f6;
+    --button-hover: #2563eb;
+    --header-bg: #1a1a1a;
+    --footer-bg: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Apply dark mode to elements */
+
+[data-theme="dark"] body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] nav a,
+[data-theme="dark"] .welcome-btn,
+[data-theme="dark"] .login-btn,
+[data-theme="dark"] .linkssss {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .hero-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .hero-content h1 {
+    color: var(--text-color);
+    text-shadow: 0 2px 4px var(--shadow-color);
+}
+
+[data-theme="dark"] .get-started-btn {
+    background-color: var(--primary-color);
+}
+
+[data-theme="dark"] .get-started-btn:hover {
+    background-color: var(--button-hover);
+}
+
+[data-theme="dark"] .support,
+[data-theme="dark"] .coaches,
+[data-theme="dark"] .testimonials {
+    background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .coach-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .testimonial {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .slider-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] footer {
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] p {
+    color: var(--text-muted);
+}
+
+
+/* Make transitions smooth */
+
+body,
+header,
+footer,
+.card,
+.coach-card,
+.testimonial,
+.slider-btn,
+a,
+button,
+h1,
+h2,
+h3,
+h4,
+p {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

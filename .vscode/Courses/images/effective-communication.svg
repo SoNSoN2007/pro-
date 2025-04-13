@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <g transform="translate(150, 100)">
+    <circle cx="250" cy="150" r="120" fill="#00BFA6" opacity="0.2"/>
+    
+    <!-- Two people silhouettes -->
+    <circle cx="180" cy="120" r="30" fill="#0084F4" opacity="0.8"/>
+    <path d="M150 180 C150 150, 210 150, 210 180 L210 240 C210 255, 195 270, 180 270 C165 270, 150 255, 150 240 Z" fill="#0084F4" opacity="0.6"/>
+    
+    <circle cx="320" cy="120" r="30" fill="#00BFA6" opacity="0.8"/>
+    <path d="M290 180 C290 150, 350 150, 350 180 L350 240 C350 255, 335 270, 320 270 C305 270, 290 255, 290 240 Z" fill="#00BFA6" opacity="0.6"/>
+    
+    <!-- Speech bubbles -->
+    <path d="M140 100 C120 100, 110 85, 110 70 C110 55, 120 40, 140 40 L180 40 C200 40, 210 55, 210 70 C210 85, 200 100, 180 100 L170 100 L155 120 Z" fill="#0084F4" opacity="0.8"/>
+    
+    <path d="M360 100 C380 100, 390 85, 390 70 C390 55, 380 40, 360 40 L320 40 C300 40, 290 55, 290 70 C290 85, 300 100, 320 100 L330 100 L345 120 Z" fill="#00BFA6" opacity="0.8"/>
+    
+    <!-- Connection lines -->
+    <path d="M210 70 L290 70" stroke="#2D3436" stroke-width="3" stroke-dasharray="5,5"/>
+    
+    <!-- Communication symbols -->
+    <line x1="140" y1="70" x2="180" y2="70" stroke="white" stroke-width="3"/>
+    <line x1="320" y1="70" x2="360" y2="70" stroke="white" stroke-width="3"/>
+    <line x1="140" y1="60" x2="170" y2="60" stroke="white" stroke-width="3"/>
+    <line x1="140" y1="80" x2="160" y2="80" stroke="white" stroke-width="3"/>
+    <line x1="320" y1="60" x2="350" y2="60" stroke="white" stroke-width="3"/>
+    <line x1="320" y1="80" x2="340" y2="80" stroke="white" stroke-width="3"/>
+    
+    <!-- Connection arrows -->
+    <path d="M230 150 L270 150" stroke="#2D3436" stroke-width="3"/>
+    <path d="M270 150 L260 145 L260 155 Z" fill="#2D3436"/>
+    
+    <path d="M270 170 L230 170" stroke="#2D3436" stroke-width="3"/>
+    <path d="M230 170 L240 165 L240 175 Z" fill="#2D3436"/>
+    
+    <!-- Global/network symbol -->
+    <circle cx="250" cy="320" r="30" fill="none" stroke="#2D3436" stroke-width="3"/>
+    <ellipse cx="250" cy="320" rx="30" ry="15" fill="none" stroke="#2D3436" stroke-width="2"/>
+    <line x1="220" y1="320" x2="280" y2="320" stroke="#2D3436" stroke-width="2"/>
+    <line x1="250" y1="290" x2="250" y2="350" stroke="#2D3436" stroke-width="2"/>
+  </g>
+  <text x="400" y="550" font-family="Arial" font-size="24" fill="#2D3436" text-anchor="middle">Effective Communication</text>
+</svg>

@@ -1,0 +1,324 @@
+/* Theme-specific styles for the services page */
+
+
+/* Theme toggle button styling */
+
+.theme-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    margin-right: 10px;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle svg {
+    color: var(--text-color, #333);
+    transition: color 0.3s ease, transform 0.5s ease;
+}
+
+[data-theme="dark"] .theme-toggle svg {
+    color: var(--text-color-dark, #e0e0e0);
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(15deg);
+}
+
+
+/* Dark mode styles */
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border-color: #333;
+    --card-bg: #1e1e1e;
+    --primary-color: #3b82f6;
+    --button-hover: #2563eb;
+    --header-bg: #1a1a1a;
+    --footer-bg: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --accent-color: #4b5563;
+    --hover-bg: #2a2a2a;
+}
+
+
+/* Apply dark mode to elements */
+
+[data-theme="dark"] body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] nav a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .services-hero,
+[data-theme="dark"] .services-overview,
+[data-theme="dark"] .service-details,
+[data-theme="dark"] .pricing-section,
+[data-theme="dark"] .process-section,
+[data-theme="dark"] .testimonials-section,
+[data-theme="dark"] .faq-section {
+    background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .hero-subtitle,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .section-subtitle,
+[data-theme="dark"] .section-description {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .service-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="dark"] .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .service-icon {
+    color: var(--primary-color);
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+[data-theme="dark"] .service-title {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .service-description {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .service-learn-more {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .service-learn-more:hover {
+    color: var(--button-hover);
+}
+
+[data-theme="dark"] .service-detail-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="dark"] .detail-image {
+    border: 1px solid var(--border-color);
+    filter: brightness(0.9);
+}
+
+[data-theme="dark"] .detail-title {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .detail-description {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .feature-item {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .feature-icon {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .process-step {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="dark"] .step-number {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+[data-theme="dark"] .step-title {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .step-description {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .process-connector {
+    background-color: var(--border-color);
+}
+
+[data-theme="dark"] .pricing-table {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="dark"] .pricing-table.featured {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 15px var(--shadow-color);
+}
+
+[data-theme="dark"] .pricing-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .pricing-title {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .pricing-price {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .pricing-period {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .pricing-feature {
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .pricing-feature-icon {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .pricing-feature.disabled {
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+[data-theme="dark"] .testimonial-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+[data-theme="dark"] .testimonial-text {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .testimonial-author {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .testimonial-company {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .testimonial-avatar {
+    border: 2px solid var(--border-color);
+}
+
+[data-theme="dark"] .faq-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .faq-question {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .faq-answer {
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .faq-toggle {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .faq-item.active {
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] footer {
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .footer-links a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .cta-section {
+    background-color: var(--accent-color);
+}
+
+[data-theme="dark"] .cta-title,
+[data-theme="dark"] .cta-description {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+}
+
+[data-theme="dark"] .btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+/* Make transitions smooth */
+
+body,
+header,
+footer,
+.service-card,
+.service-detail-card,
+.process-step,
+.pricing-table,
+.testimonial-card,
+.faq-item,
+.detail-image,
+a,
+button,
+h1,
+h2,
+h3,
+h4,
+p {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="messenger-telegram">
+        <div class="left-sidebar">
+            <div class="sidebar-header">
+                <div class="controls">
+                    <div class="icon-button"><img class="img" src="img/edit-pen.svg"></div>
+                    <div class="text-wrapper">Chats</div>
+                    <div class="btn"><img class="icon-huge-user" src="img/user.svg"></div>
+                </div>
+                <div class="input-element">
+                    <img class="icon-huge-search" src="img/search-2.svg">
+                    <div class="div">Search</div>
+                </div>
+            </div>
+            <div class="list-people">
+                <div class="item-user">
+                    <div class="user-info">
+                        <div class="avatar"><img class="status" src="img/status-7.svg"></div>
+                        <div class="text">
+                            <div class="jazmyne">AI Chat Model</div>
+                            <div class="text-wrapper-2">id voluptatem omnis</div>
+                            <div class="text-wrapper-3">19:45</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group-2">
+            <div class="message-container">
+                <!-- Messages will be dynamically added here -->
+            </div>
+            <div class="type-block">
+                <div class="icon-huge-mic-voice-wrapper"><img class="icon-huge-mic-voice" src="img/mic-voice.svg"></div>
+                <div class="textarea">
+                    <input type="text" id="user-input" placeholder="Type Message">
+                    <img class="icon-huge-attach" src="img/attach-file.svg">
+                    <img class="happy" src="img/happy.png">
+                </div>
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

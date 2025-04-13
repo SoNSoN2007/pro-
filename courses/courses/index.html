@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Coach</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Navbar -->
+     <div id="navbar"></div>
+     <script>
+     fetch('..//components//navbar.html')
+   .then(response => response.text())
+   .then(data => {
+     document.getElementById('navbar').innerHTML = data;
+   });
+   </script>
+    </header>
+
+    <main class="main-content">
+        <div class="filter-bar">
+            <div class="filter-actions">
+                <button class="filter-button">Filter</button>
+                <div class="search-box">
+                    <input type="text" placeholder="UI/UX Design" class="search-input">
+                    <button class="search-icon"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="sort-section">
+                <label for="sort" class="sort-label">Sort by:</label>
+                <select id="sort" class="sort-select">
+                    <option>Trending</option>
+                    <option>Newest</option>
+                    <option>Popular</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <div class="filter-category">
+                    <h2 class="filter-title">CATEGORY</h2>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="Development" id="development"><label for="development">Development</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="web-development" id="web-development"><label for="web-development">Web Development</label></li>
+                        <li><input type="checkbox"data-filter-type="category" data-filter-value="data-science" id="data-science"><label for="data-science">Data Science</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="mobile-development" id="mobile-development"><label for="mobile-development">Mobile Development</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="software-engineering" id="software-engineering"><label for="software-engineering">Software Engineering</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="software-development" id="software-development"><label for="software-development">Software Development</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="software-tools" id="software-tools"><label for="software-tools">Software Tools</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="no-code-development" id="no-code-development"><label for="no-code-development">No-Code Development</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="business" id="business"><label for="business">Business</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="finance-accounting" id="finance-accounting"><label for="finance-accounting">Finance & Accounting</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="it-software" id="it-software"><label for="it-software">IT & Software</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="office-productivity" id="office-productivity"><label for="office-productivity">Office Productivity</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="personal-development" id="personal-development"><label for="personal-development">Personal Development</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="design" id="design"><label for="design">Design</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="marketing" id="marketing"><label for="marketing">Marketing</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="lifestyle" id="lifestyle"><label for="lifestyle">Lifestyle</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="photography-video" id="photography-video"><label for="photography-video">Photography & Video</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="music" id="music"><label for="music">Music</label></li>
+                        <li><input type="checkbox" data-filter-type="category" data-filter-value="health-fitness" id="health-fitness"><label for="health-fitness">Health & Fitness</label></li>
+                    </ul>
+                </div>
+                <div class="filter-category">
+                    <h2 class="filter-title">TOOLS</h2>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" data-filter-type="tool" data-filter-value="HTML" id="html"><label for="html">HTML</label></li>
+                        <li><input type="checkbox" data-filter-type="tool" data-filter-value="CSS" id="css"><label for="css">CSS</label></li>
+                        <li><input type="checkbox" data-filter-type="tool" data-filter-value="JavaScript" id="javascript"><label for="javascript">JavaScript</label></li>
+                        <li><input type="checkbox" data-filter-type="tool" data-filter-value="Node.js" id="nodejs"><label for="nodejs">Node.js</label></li>
+                        <li><input type="checkbox" data-filter-type="tool" data-filter-value="React" id="react"><label for="react">React</label></li>
+                        <li><input type="checkbox" data-filter-type="tool" data-filter-value="Angular" id="angular"><label for="angular">Angular</label></li>
+                        <li><input type="checkbox" data-filter-type="tool" data-filter-value="Vue" id="vue"><label for="vue">Vue</label></li>
+                    </ul>
+                </div>
+                <div class="filter-category">
+                    <h2 class="filter-title">RATING</h2>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" data-filter-type="rating" data-filter-value="5 star" id="5-star"><label for="5-star">5 Star</label></li>
+                        <li><input type="checkbox" data-filter-type="rating" data-filter-value="4 star" id="4-star"><label for="4-star">4 Star</label></li>
+                        <li><input type="checkbox" data-filter-type="rating" data-filter-value="3 star" id="3-star"><label for="3-star">3 Star</label></li>
+                        <li><input type="checkbox" data-filter-type="rating" data-filter-value="2 star" id="2-star"><label for="2-star">2 Star</label></li>
+                        <li><input type="checkbox" data-filter-type="rating" data-filter-value="1 star" id="1-star"><label for="1-star">1 Star</label></li>
+                    </ul>
+                </div>
+                <div class="filter-category">
+                    <h2 class="filter-title">COURSE LEVEL</h2>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" data-filter-type="course-level" data-filter-value="beginner" id="beginner"><label for="beginner">Beginner</label></li>
+                        <li><input type="checkbox" data-filter-type="course-level" data-filter-value="intermediate" id="intermediate"><label for="intermediate">Intermediate</label></li>
+                        <li><input type="checkbox" data-filter-type="course-level" data-filter-value="advanced" id="advanced"><label for="advanced">Advanced</label></li>
+                    </ul>
+                </div>
+            </aside>
+            <section  class="courses-grid">
+                <!-- Course cards remain unchanged structurally -->
+            </section>
+        </div>
+        <div class="pagination-container" id="pagination"></div>
+
+    </main>
+    
+    <script src="js/courses.js"></script>
+</body>
+</html>

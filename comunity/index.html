@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community - Dream Coach</title>
+    <link rel="stylesheet" href="../common/global-dark-mode.css" />
+    <link rel="stylesheet" href="../common/typography.css" />
+    <link rel="stylesheet" href="../common/header-common.css" />
+    <link rel="stylesheet" href="../common/dark-mode.css" />
+    <link rel="stylesheet" href="../common/theme-toggle.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header-scroll.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../common/logo-styles.css" />
+    <link rel="stylesheet" href="../common/footer-styles.css" />
+    <script src="../courses/theme-toggle.js" defer></script>
+    <style>
+        /* Fix for dark mode backgrounds to be consistent across pages */
+        
+        html[data-theme="dark"] body {
+            background-color: var(--bg-dark, #1a1a1a);
+            color: var(--text-white, #f5f5f5);
+        }
+        
+        html[data-theme="dark"] .container {
+            background-color: var(--bg-dark, #1a1a1a);
+        }
+        
+        html[data-theme="dark"] .feed-item,
+        html[data-theme="dark"] .user-profile,
+        html[data-theme="dark"] .left-sidebar,
+        html[data-theme="dark"] .right-sidebar,
+        html[data-theme="dark"] .create-post,
+        html[data-theme="dark"] .event-card,
+        html[data-theme="dark"] .messenger-preview,
+        html[data-theme="dark"] .friend-suggestion {
+            background-color: var(--bg-dark-secondary, #222);
+            border-color: var(--border-dark, #333);
+        }
+        
+        html[data-theme="dark"] .main-content {
+            background-color: var(--bg-dark, #1a1a1a);
+        }
+        
+        html[data-theme="dark"] .menu-link {
+            color: var(--text-white, #f5f5f5);
+        }
+        
+        html[data-theme="dark"] .status,
+        html[data-theme="dark"] .post-actions button,
+        html[data-theme="dark"] .post-comments,
+        html[data-theme="dark"] .sidebar-title,
+        html[data-theme="dark"] .event-title,
+        html[data-theme="dark"] .friend-name {
+            color: var(--text-white, #f5f5f5);
+        }
+        /* Theme toggle button styles */
+        
+        .theme-toggle {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theme-toggle svg {
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        
+        html[data-theme="dark"] .theme-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        /* Profile dropdown active states */
+        
+        .profile-dropdown.active .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Replace the old nav element with this new header -->
+    <header>
+        <nav>
+            <div class="logo-common">
+                <a href="../welcome/index.html"><img src="../welcome/images/logo.png" alt="Dream Coach Logo"></a>
+            </div>
+            <div class="nav-links">
+                <a href="../home clint/index.html">Home</a>
+                <a href="../Courses/Courses.html">Courses</a>
+                <a href="../chat/index.html">Chat</a>
+                <a href="../comunity/index.html" class="active">Community</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" title="Toggle Dark Mode" id="themeToggleBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button class="search-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+                <button class="cart-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+          </button>
+                <div class="profile-dropdown">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Profile" class="profile-img" />
+                    <div class="dropdown-content">
+                        <a href="../profile/index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg> Profile
+                        </a>
+                        <a href="../courses/my-courses.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg> My Courses
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            </svg> Settings
+                        </a>
+                        <hr />
+                        <a href="#" class="logout">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <!-- User Profile -->
+            <div class="user-profile">
+                <div class="profile-pic">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="User" />
+                </div>
+                <div class="profile-info">
+                    <h3>Asfa Batool Ansari</h3>
+                    <span class="status">Online</span>
+                </div>
+            </div>
+
+            <!-- Main Menu -->
+            <div class="menu">
+                <a href="#" class="menu-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="menu-link">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Friends</span>
+                    <div class="badge">5</div>
+                </a>
+                <a href="#" class="menu-link">
+                    <i class="fas fa-users"></i>
+                    <span>Groups</span>
+                    <div class="menu-preview">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Groups" />
+                    </div>
+                </a>
+                <a href="#" class="menu-link">
+                    <i class="fas fa-store"></i>
+                    <span>Marketplace</span>
+                    <div class="menu-preview">
+                        <img src="https://images.unsplash.com/photo-1472851294608-dccba630e2f6" alt="Market" />
+                    </div>
+                </a>
+                <a href="#" class="menu-link">
+                    <i class="fas fa-play"></i>
+                    <span>Watch</span>
+                    <div class="menu-preview">
+                        <img src="https://images.unsplash.com/photo-1578022761797-b8636ac1773c" alt="Watch" />
+                    </div>
+                </a>
+            </div>
+
+            <!-- Shortcuts -->
+            <div class="shortcuts">
+                <div class="section-title">
+                    <h4>Your Shortcuts</h4>
+                </div>
+                <div class="shortcut-list">
+                    <a href="#" class="shortcut-link">
+                        <div class="shortcut-thumb">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5" alt="UI/UX" />
+                        </div>
+                        <span>UI/UX Community</span>
+                    </a>
+                    <a href="#" class="shortcut-link">
+                        <div class="shortcut-thumb">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Web Dev" />
+                        </div>
+                        <span>Web Development</span>
+                    </a>
+                    <a href="#" class="shortcut-link">
+                        <div class="shortcut-thumb">
+                            <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2" alt="Memes" />
+                        </div>
+                        <span>Memes Group</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="stories-section">
+                <div class="story-card create-story">
+                    <div class="story-image">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="Create Story" />
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="Story 1" />
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="Story 2" />
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="Story 3" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="create-post">
+                <div class="user-avatar">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="Profile" />
+                </div>
+                <div class="post-input-container">
+                    <input type="text" id="post-input" placeholder="What's on your mind, Asfa Batool?" />
+                    <div class="post-options">
+                        <button onclick="startLiveVideo()">
+                            <i class="fas fa-video"></i> Live video
+                        </button>
+                        <label for="media-upload" class="upload-btn">
+                            <i class="fas fa-image"></i> Photo/video
+                        </label>
+                        <input type="file" id="media-upload" accept="image/*,video/*" style="display: none" />
+                        <button class="emoji-button">
+                            <i class="fas fa-smile"></i> Feeling/activity
+                        </button>
+                    </div>
+                    <div id="emoji-picker" class="emoji-picker" style="display: none">
+                        <!-- Emoji picker will be populated by JavaScript -->
+                    </div>
+                    <div id="media-preview" class="media-preview" style="display: none">
+                        <!-- Preview uploaded media here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="posts">
+                <!-- First Post -->
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">
+                            <img src="https://i.pravatar.cc/150?img=45" alt="Group" />
+                        </div>
+                        <div class="post-info">
+                            <h4>Memes Group</h4>
+                            <span>1h</span>
+                        </div>
+                        <div class="post-actions">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="post-text">
+                        <p>Check out this amazing AI art! 🎨✨</p>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2" alt="Post" />
+                            <!-- <img src="https: -->
+                        </div>
+                    </div>
+                    <div class="post-stats">
+                        <div class="reactions">
+                            <span>❤️ 2.5K</span>
+                            <span>💬 342 comments</span>
+                            <span>🔄 89 shares</span>
+                        </div>
+                    </div>
+                    <div class="post-actions-buttons">
+                        <button><i class="far fa-thumbs-up"></i> Like</button>
+                        <button><i class="far fa-comment"></i> Comment</button>
+                        <button><i class="fas fa-share"></i> Share</button>
+                    </div>
+                </div>
+
+                <!-- Second Post -->
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-avatar">
+                            <img src="https://i.pravatar.cc/150?img=29" alt="User" />
+                        </div>
+                        <div class="post-info">
+                            <h4>Web Development Community</h4>
+                            <span>3h</span>
+                        </div>
+                    </div>
+                    <div class="post-text">
+                        <p>
+                            🚀 New JavaScript Features You Should Know in 2024! #webdev #javascript
+                        </p>
+                    </div>
+                    <div class="post-content code-block">
+                        <pre><code>
+// New JavaScript Features
+const newArray = [1, 2, 3, 4, 5];
+console.log(newArray.toReversed()); // [5, 4, 3, 2, 1]
+console.log(newArray); // [1, 2, 3, 4, 5] - original unchanged
+                        </code></pre>
+                    </div>
+                    <div class="post-stats">
+                        <div class="reactions">
+                            <span>👍 1.2K</span>
+                            <span>💬 156 comments</span>
+                            <span>🔄 45 shares</span>
+                        </div>
+                    </div>
+                    <div class="post-actions-buttons">
+                        <button><i class="far fa-thumbs-up"></i> Like</button>
+                        <button><i class="far fa-comment"></i> Comment</button>
+                        <button><i class="fas fa-share"></i> Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar-right">
+            <!-- Sponsored -->
+            <div class="section-box">
+                <h4>Sponsored</h4>
+                <div class="sponsored-list">
+                    <div class="sponsored-item">
+                        <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2" alt="Perfume" />
+                        <div class="item-details">
+                            <p>Best Perfume for Him</p>
+                            <span>$89.99</span>
+                        </div>
+                    </div>
+                    <div class="sponsored-item">
+                        <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2" alt="Heels" />
+                        <div class="item-details">
+                            <p>High Heels new style</p>
+                            <span>$129.99</span>
+                        </div>
+                    </div>
+                    <div class="sponsored-item">
+                        <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2" alt="Watch" />
+                        <div class="item-details">
+                            <p>Luxury Watch Collection</p>
+                            <span>$299.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friend Requests -->
+            <div class="section-box">
+                <h4>Friend Requests</h4>
+                <div class="requests-list">
+                    <div class="request-item">
+                        <img src="https://i.pravatar.cc/150?img=47" alt="Hannah" />
+                        <div class="request-details">
+                            <h5>Hannah Shoael</h5>
+                            <span>4 mutual friends</span>
+                            <div class="request-actions">
+                                <button class="btn-confirm">Confirm</button>
+                                <button class="btn-delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="request-item">
+                        <img src="https://i.pravatar.cc/150?img=48" alt="James" />
+                        <div class="request-details">
+                            <h5>James Wilson</h5>
+                            <span>2 mutual friends</span>
+                            <div class="request-actions">
+                                <button class="btn-confirm">Confirm</button>
+                                <button class="btn-delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contacts -->
+            <div class="section-box">
+                <h4>Contacts</h4>
+                <div class="contacts-list">
+                    <div class="contact-item">
+                        <div class="contact-avatar">
+                            <img src="https://i.pravatar.cc/150?img=33" alt="Mubashira" />
+                            <span class="status active"></span>
+                        </div>
+                        <span>Mubashira Ansari</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-avatar">
+                            <img src="https://i.pravatar.cc/150?img=34" alt="Walija" />
+                            <span class="status active"></span>
+                        </div>
+                        <span>Walija Ansari</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-avatar">
+                            <img src="https://i.pravatar.cc/150?img=35" alt="Rida" />
+                            <span class="status"></span>
+                        </div>
+                        <span>Rida Fatima</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trending -->
+            <div class="section-box">
+                <h4>Trending Topics</h4>
+                <div class="trending-list">
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2" alt="Web Dev" />
+                        <div class="trending-details">
+                            <span class="tag">#WebDevelopment</span>
+                            <span class="count">52.4K posts</span>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2" alt="AI" />
+                        <div class="trending-details">
+                            <span class="tag">#ArtificialIntelligence</span>
+                            <span class="count">33.1K posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+    <script src="../common/theme-switcher.js"></script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Dream Coach</h3>
+                <p>Dream Coach is a premier platform connecting aspiring individuals with expert coaches to help achieve personal and professional goals through personalized guidance and support.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../home clint/index.html">Home</a></li>
+                    <li><a href="../Courses/index.html">Courses</a></li>
+                    <li><a href="../chat/index.html">Chat</a></li>
+                    <li><a href="../comunity/index.html">Community</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coaching Street, Success City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@dreamcoach.com</p>
+                </div>
+                <p>Subscribe to our newsletter for updates and tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Dream Coach. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add this script just before the closing </body> tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Profile dropdown functionality
+            const profileDropdown = document.querySelector('.profile-dropdown');
+            if (profileDropdown) {
+                profileDropdown.addEventListener('click', function(e) {
+                    this.classList.toggle('active');
+                    e.stopPropagation();
+                });
+            }
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                if (profileDropdown) {
+                    profileDropdown.classList.remove('active');
+                }
+            });
+
+            // Theme toggle functionality
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const htmlElement = document.documentElement;
+
+            // Apply saved theme preference on page load
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+
+            // Toggle theme when button is clicked
+            themeToggleBtn.addEventListener('click', function() {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+                // Update theme
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                console.log('Theme toggled to:', newTheme);
+            });
+        });
+    </script>
+</body>
+
+</html>

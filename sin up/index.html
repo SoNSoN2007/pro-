@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Coach - Get Started</title>
+    <link rel="stylesheet" href="../common/global-dark-mode.css">
+    <link rel="stylesheet" href="../common/dark-mode.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- <header class="signup-header">
+        <div class="nav-container">
+            <div class="logo"><a href="../welcome/index.html">DREAM COACH</a></div>
+            <nav>
+                <ul>
+                    <li><a href="../home clint/index.html">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="../chat/index.html">Chat</a></li>
+                    <li><a href="../comunity/index.html">Community</a></li>
+                    <li><a href="../login/index.html">Log In</a></li>
+                    <li><a href="../sin up/index.html" class="active">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+    <div class="container">
+        <div class="form-container">
+            <h1>Get Started Now</h1>
+            <div class="logo">DREAM COACH</div>
+            <form id="signupForm">
+                <div class="name-group">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="date" id="birthDate" placeholder="BirthDate" required>
+                <select id="userType" required>
+                    <option value="" disabled selected>Select Account Type</option>
+                    <option value="client">Client</option>
+                    <option value="coach">Coach</option>
+                </select>
+
+                <button type="submit" class="signin-btn">SignIn</button>
+
+                <div class="divider">
+                    <span>Or</span>
+                </div>
+
+                <button type="button" class="google-btn">
+                    <img src="images/google-icon.svg" alt="Google">
+                    SignUp with Google
+                </button>
+
+                <p class="login-link">You Have An Account? <a href="#">Login</a></p>
+            </form>
+        </div>
+        <div class="image-container">
+            <img src="images/coaching-illustration.svg" alt="Coaching and Self Development Illustration">
+        </div>
+    </div>
+
+    <!-- Theme toggle button -->
+    <div class="theme-toggle-container">
+        <button class="theme-toggle" title="Toggle Dark Mode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../common/theme-switcher.js"></script>
+</body>
+
+</html>

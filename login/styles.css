@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #00e5ff 0%, #673ab7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.8s ease-out;
+}
+
+.login-container {
+    flex: 1;
+    padding: 48px;
+    max-width: 500px;
+}
+
+.image-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f6fa 0%, #eef1f9 100%);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #2d3748;
+    font-weight: 600;
+    animation: slideIn 0.6s ease-out;
+}
+
+.welcome-text {
+    color: #718096;
+    margin-bottom: 32px;
+    font-size: 16px;
+    animation: slideIn 0.6s ease-out 0.1s backwards;
+}
+
+.google-login {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    animation: slideIn 0.6s ease-out 0.2s backwards;
+}
+
+.google-login:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0;
+    color: #a0aec0;
+    animation: fadeIn 0.6s ease-out 0.3s backwards;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.divider span {
+    padding: 0 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    animation: slideIn 0.6s ease-out 0.4s backwards;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #00BFA6;
+    box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.2);
+}
+
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.eye-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.eye-icon:hover {
+    opacity: 1;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #00BFA6;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease-out 0.5s backwards;
+}
+
+.forgot-password:hover {
+    color: #009688;
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00BFA6 0%, #0084F4 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: slideIn 0.6s ease-out 0.6s backwards;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 191, 166, 0.3);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 24px;
+    color: #718096;
+    font-size: 14px;
+    animation: fadeIn 0.6s ease-out 0.7s backwards;
+}
+
+.signup-link a {
+    color: #00BFA6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #009688;
+    text-decoration: underline;
+}
+
+.login-image {
+    max-width: 100%;
+    height: auto;
+    animation: fadeIn 1s ease-out;
+}
+
+
+/* Add dark mode specific styles for login page */
+
+[data-theme='dark'] body {
+    background: linear-gradient(135deg, #004d40 0%, #311b92 100%);
+}
+
+[data-theme='dark'] .container {
+    background: rgba(45, 45, 45, 0.95);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .image-container {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] .form-group label {
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] .welcome-text,
+[data-theme='dark'] .divider span,
+[data-theme='dark'] .signup-link {
+    color: var(--text-secondary);
+}
+
+[data-theme='dark'] .google-login {
+    background: #2d2d2d;
+    border-color: #3d3d3d;
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] .google-login:hover {
+    background: #3d3d3d;
+}
+
+[data-theme='dark'] input {
+    background-color: rgba(45, 45, 45, 0.8);
+    border-color: #3d3d3d;
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] input::placeholder {
+    color: var(--text-secondary);
+}
+
+[data-theme='dark'] .login-button {
+    background: var(--gradient);
+}
+
+[data-theme='dark'] a {
+    color: var(--primary-color);
+}
+
+
+/* Theme toggle styling is now in ../common/theme-toggle.css */
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 20px;
+    }
+    .image-container {
+        display: none;
+    }
+    .login-container {
+        max-width: 100%;
+        padding: 32px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+}

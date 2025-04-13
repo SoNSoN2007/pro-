@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Dream Coach</title>
+    <link rel="stylesheet" href="../common/typography.css">
+    <link rel="stylesheet" href="../common/header-common.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../common/logo-styles.css">
+    <link rel="stylesheet" href="../common/footer-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-common">
+                <a href="../welcome/index.html"><img src="images/logo.png" alt="Dream Coach Logo"></a>
+            </div>
+            <div class="nav-links">
+                <a href="/home clint/index.html">Home</a>
+                <a href="/Courses/index.html" class="active">Courses</a>
+                <a href="/chat/index.html">Chat</a>
+                <a href="/comunity/index.html">Community</a>
+            </div>
+            <div class="nav-actions">
+                <button class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <button class="cart-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </button>
+                <div class="profile-dropdown">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Profile" class="profile-img" />
+                    <div class="dropdown-content">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Profile</a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Edit Account</a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Settings</a>
+                        <hr />
+                        <a href="#" class="logout"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Expand Your Knowledge</h1>
+            <p>Choose from hundreds of courses to accelerate your growth and achieve your dreams</p>
+        </div>
+    </section>
+
+    <!-- Search Container -->
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for courses, skills, or topics...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Categories Section -->
+        <section class="course-categories">
+            <div class="section-header">
+                <h2>Popular Categories</h2>
+                <a href="#" class="view-all">View All Categories <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src=" " alt="Personal Development">
+                    <!-- add imge link from internt for this topic  -->
+                    <div class="category-content">
+                        <h3>Personal Development</h3>
+                        <p>Enhance your personal skills and mindset</p>
+                        <span class="course-count">24 Courses</span>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/business.svg" alt="Business">
+                    <div class="category-content">
+                        <h3>Business</h3>
+                        <p>Learn essential business strategies</p>
+                        <span class="course-count">18 Courses</span>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/leadership.svg" alt="Leadership">
+                    <div class="category-content">
+                        <h3>Leadership</h3>
+                        <p>Develop your leadership abilities</p>
+                        <span class="course-count">15 Courses</span>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/communication.svg" alt="Communication">
+                    <div class="category-content">
+                        <h3>Communication</h3>
+                        <p>Master effective communication skills</p>
+                        <span class="course-count">12 Courses</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Courses Section -->
+        <section class="featured-courses">
+            <div class="section-header">
+                <h2>Featured Courses</h2>
+                <a href="#" class="view-all">View All Courses <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="images/self-confidence.svg" alt="Mastering Self-Confidence">
+                        <span class="course-level">Beginner</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Mastering Self-Confidence</h3>
+                        <p>Learn proven techniques to boost your confidence and achieve your goals through practical exercises and mindset shifts.</p>
+                        <div class="course-meta">
+                            <div class="instructor">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Instructor">
+                                <span>Sarah Johnson</span>
+                            </div>
+                            <div class="price">$99</div>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-stats">
+                            <div class="course-stat"><i class="far fa-clock"></i> 6 weeks</div>
+                            <div class="course-stat"><i class="far fa-user"></i> 2.4k students</div>
+                        </div>
+                        <button class="enroll-btn">Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="images/leadership-essentials.svg" alt="Business Leadership Essentials">
+                        <span class="course-level">Intermediate</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Business Leadership Essentials</h3>
+                        <p>Develop crucial leadership skills for the modern business world with real-world case studies and expert guidance.</p>
+                        <div class="course-meta">
+                            <div class="instructor">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" alt="Instructor">
+                                <span>Michael Roberts</span>
+                            </div>
+                            <div class="price">$149</div>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-stats">
+                            <div class="course-stat"><i class="far fa-clock"></i> 8 weeks</div>
+                            <div class="course-stat"><i class="far fa-user"></i> 1.8k students</div>
+                        </div>
+                        <button class="enroll-btn">Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="images/effective-communication.svg" alt="Effective Communication">
+                        <span class="course-level">All Levels</span>
+                    </div>
+                    <div class="course-info">
+                        <h3>Effective Communication</h3>
+                        <p>Master the art of communication in professional and personal settings with practical techniques and interactive exercises.</p>
+                        <div class="course-meta">
+                            <div class="instructor">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" alt="Instructor">
+                                <span>Emily Chen</span>
+                            </div>
+                            <div class="price">$129</div>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-stats">
+                            <div class="course-stat"><i class="far fa-clock"></i> 5 weeks</div>
+                            <div class="course-stat"><i class="far fa-user"></i> 3.2k students</div>
+                        </div>
+                        <button class="enroll-btn">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="testimonial-container">
+                <div class="section-header">
+                    <h2>What Our Students Say</h2>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">The courses on Dream Coach have completely transformed my approach to leadership. I've gained practical skills that I use every day in my role as a team manager.</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Testimonial Author">
+                                <div class="author-info">
+                                    <h4>David Wilson</h4>
+                                    <p>Marketing Director</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">I was struggling with confidence in my presentations until I took the Effective Communication course. Now I feel empowered to speak in front of any audience.</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Testimonial Author">
+                                <div class="author-info">
+                                    <h4>Jessica Martinez</h4>
+                                    <p>Sales Executive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">The personal development courses here are exceptional. The instructors are knowledgeable and the content is structured in a way that makes learning enjoyable and effective.</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Testimonial Author">
+                                <div class="author-info">
+                                    <h4>Robert Thompson</h4>
+                                    <p>Entrepreneur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="newsletter-container">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest course updates, special offers, and expert tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Dream Coach</h3>
+                <p>Dream Coach is a premier platform connecting aspiring individuals with expert coaches to help achieve personal and professional goals through personalized guidance and support.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../home clint/index.html">Home</a></li>
+                    <li><a href="../Courses/index.html">Courses</a></li>
+                    <li><a href="../chat/index.html">Chat</a></li>
+                    <li><a href="../comunity/index.html">Community</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coaching Street, Success City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@dreamcoach.com</p>
+                </div>
+                <p>Subscribe to our newsletter for updates and tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Dream Coach. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
